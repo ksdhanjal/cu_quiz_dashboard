@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  form {
+    @apply m-auto px-10 py-8 rounded-lg flex flex-col max-w-md md:max-w-lg shadow-xl;
+  }
+
+  .form-button-primary {
+    @apply bg-primary text-white rounded-md py-2 px-10 hover:scale-105 active:scale-95 duration-150;
+  }
+
+  .form-button-secondary {
+    @apply bg-white border-2 border-primary text-primary rounded-md py-2 px-10 hover:scale-105 active:scale-95 duration-150;
+  }
+
+  form label {
+    @apply mb-6 text-gray-700;
+  }
+
+  form label input,
+  form label textarea {
+    @apply bg-gray-100 px-4 py-3 rounded-lg mt-2;
+  }
+
+  form label select {
+    @apply bg-gray-100 px-4 py-3 rounded-lg mt-2;
+  }
+
+  form > h3 {
+    @apply text-3xl font-semibold;
+  }
+
+  th, td{
+    @apply border pl-4
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  font-family: "Anton", sans-serif;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.question_item-exit-active {
+  opacity: 0;
+  transform: translateX(1000px);
+  transition: all 700ms ease-in-out;
+}
